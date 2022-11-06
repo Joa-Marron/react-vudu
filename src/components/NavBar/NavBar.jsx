@@ -8,9 +8,9 @@ function Navbar() {
     return (
         <div className='linkNav'>
 
-            <a href="/"> Nosotros </a>
-            <a href="/"> Productos </a>
-            <a href="/"> Contactos </a>
+            <a className='link' href="/"> Nosotros </a>
+            <a className='link' href="/"> Productos </a>
+            <a className='link' href="/"> Contactos </a>
             <CartWidget/>
 
         </div>

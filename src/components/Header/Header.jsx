@@ -5,8 +5,8 @@ import './Header.css'
 const Header = () => {
     return (
         <div>
-            <Title/>
-            <div className='logo'>
+            <Title title={'Vudu'} />
+            <div className='logo container'>
                 <img src={logo} alt="" />
             </div>
         </div >
