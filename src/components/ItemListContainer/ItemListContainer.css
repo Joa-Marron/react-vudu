@@ -3,11 +3,75 @@
     src: url(../../assets/font/Roboto-Regular.ttf);
 }
 
-.greeting {
+@font-face {
+    font-family: Loading;
+    src: url(../../assets/font/HeavyLoading.ttf);
+}
+
+@font-face {
+    font-family: Apple;
+    src: url(../../assets/font/AppleGaramond.ttf);
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.saludo {
     display: flex;
     justify-content: center;
     font-family: Roboto;
-    color: rgb(18, 2, 32);
-    font-size: large;
+    color: rgb(233, 85, 21);
+    font-size: x-large;
     margin: 20px;
+}
+
+.listaProductos {
+    font-family: Apple;
+    font-size: larger;
+    color: rgb(34, 0, 56);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    padding: 2px;
+    margin: 20px;
+}
+
+.imgProductos {
+    height: 400px;
+    width: 500px;
+    border: 3px solid rgb(255, 255, 255);
+}
+
+.loading {
+    font-family: Loading;
+    font-size: 80px;
+    color: rgb(16, 1, 36);
+}
+
+.count {
+    font-family: Apple;
+    font-size: 25px;
+
+}
+
+.btnCount {
+    height: 80px;
+    width: 200px;
+    padding: 5px;
+    border: 4px solid black;
+    border-radius: 20px;
+    margin: 8px;
+    background-color: rgb(211, 211, 2);
+
+}
+
+.btnCountStyle {
+    font-family: Apple;
+    font-size: 25px;
+    color: rgb(14, 1, 22);
 }

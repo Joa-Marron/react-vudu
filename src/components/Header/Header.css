@@ -1,8 +1,7 @@
 .logo {
     display: flex;
     justify-content: center;
-    margin: 5px;
+    align-items: center;
     padding: 2px;
-    margin-left: 80px;
+    background-color: bisque;
 }
-

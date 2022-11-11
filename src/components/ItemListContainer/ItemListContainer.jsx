@@ -8,73 +8,74 @@ import './ItemListContainer.css'
 const ItemListContainer = (props) => {
 
   const [count, setCount] = useState(0)
-  const [bool, setBool] = useState(true)
+  const [loading, setLoading] = useState(true)
   const [products, setProducts] = useState([])
 
   const sumar = () => {
     setCount(count + 1)
   }
 
-  const cambiarEstado = () => {
-    setBool(!bool)
-  }
-
-
   useEffect(() => {
 
     gFetch
       .then(resp => setProducts(resp))
-      .catch(err => console.log(err))
-      .finally(() => console.log('Siempre'))
+      .finally(() => setLoading(false))
 
   }, [])
 
   console.log(products);
 
 
-  return (<div>
+  return (
+    loading
+      ?
+      <div className='flex'>
+      <h2 className='loading'>Cargando...</h2>
+      </div>
+      :
 
-    <div className='saludo'>
-      <h2>{props.greeting}</h2>
-    </div>
+      (<div className='body'>
 
-    <div>
-      {count}
-    </div>
-
-    <div className='btn'>
-      <button onClick={sumar}> + </button>
-    </div>
-
-    <div className='btn boton'>
-      <button onClick={cambiarEstado}> Cambiar estado </button>
-    </div>
-
-    <div className='lista'>
-
-      {products.map(obj => <div key={obj.ID}>
-        <div className='lista'>
-          {obj.nombre}
-        </div>
-        <div className='lista'>
-          {obj.descripción}
-        </div>
-        <div className='lista'>
-          {obj.stock}
-        </div>
-        <div className='lista'>
-          {obj.precio}
-        </div>
-        <div className='fotoLista'>
-          <img src={obj.foto} alt="" />
+        <div>
+          <h2 className='saludo'>{props.greeting}</h2>
         </div>
 
-      </div>)}
+        <div className='listaProductos'>
 
-    </div>
+          {products.map(obj => <div key={obj.ID}>
+            <div className='listaProductos'>
+              {obj.nombre}
+            </div>
+            <div className='listaProductos'>
+              {obj.descripción}
+            </div>
+            <div className='listaProductos'>
+              {obj.stock}
+            </div>
+            <div className='listaProductos'>
+              {obj.precio}
+            </div>
+            <div className='listaProductos'>
+              <img src={obj.foto} alt="" className='imgProductos'/>
+            </div>
 
-  </div>
-  )
+            <div className='count'>
+              {count}
+            </div>
+
+            <div className='btn flex'>
+              <button onClick={sumar}> + </button>
+              <div className='btnCount flex'>
+              <button className='btn btnCountStyle'>Añadir al carrito</button>
+              </div>
+            </div>
+
+          </div>)}
+
+        </div>
+
+      </div>
+      ))
 }
 
 export default ItemListContainer

@@ -1,8 +1,19 @@
-.title{
-display: flex;
-justify-content: center;
-margin: 5px;
-margin-right: 60px;
-padding: 2px;
-color: rgb(39, 5, 68);
+@font-face {
+    font-family: popArt;
+    src: url(../../assets/font/PopArt-Regular.ttf);
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    background-color: bisque;
+}
+
+.styleTitle {
+    font-family: popArt;
+    color: rgb(0, 117, 0);
+    padding: 5px;
+    font-size: 60px;
 }

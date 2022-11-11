@@ -2,17 +2,15 @@
     list-style: none;
     display: flex;
     justify-content: space-around;
-    margin: 5px;
     align-items: center;
-    padding: 3px;
     text-align: center;
     background-color: #0c0b0b;
-    border-radius: 20px;
     border: 2px solid #0c0b0b;
+    
 }
 
 .link{
     list-style: none;
-    color: #cfcdcd;
+    color: #b4f1e2;
     font-size: large;
 }

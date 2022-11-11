@@ -5,7 +5,7 @@ import CartWidget from '../CartWidget/CartWidget'
 
 function Navbar() {
     return (
-        <div className='linkNav container'>
+        <div className='linkNav container-fluid'>
 
             <a className='link' href="/"> Nosotros </a>
             <a className='link' href="/"> Productos </a>
