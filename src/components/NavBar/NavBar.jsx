@@ -1,12 +1,11 @@
 import React from 'react'
-import carrito from '../../assets/media/carrito.png'
 import './NavBar.css'
 import CartWidget from '../CartWidget/CartWidget'
 
 
 function Navbar() {
     return (
-        <div className='linkNav'>
+        <div className='linkNav container'>
 
             <a className='link' href="/"> Nosotros </a>
             <a className='link' href="/"> Productos </a>
