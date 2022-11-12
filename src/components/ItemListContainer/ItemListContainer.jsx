@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { gFetch } from '../../utils/gFetch'
 import './ItemListContainer.css'
 
@@ -7,7 +8,7 @@ import './ItemListContainer.css'
 
 const ItemListContainer = (props) => {
 
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(1)
   const [loading, setLoading] = useState(true)
   const [products, setProducts] = useState([])
 
@@ -42,7 +43,8 @@ const ItemListContainer = (props) => {
 
         <div className='listaProductos'>
 
-          {products.map(obj => <div key={obj.ID}>
+          {products.map(obj => <div key={obj.ID} className='card'>
+            <Link to={`/detail/${obj.id}`}>
             <div className='listaProductos'>
               {obj.nombre}
             </div>
@@ -66,10 +68,10 @@ const ItemListContainer = (props) => {
             <div className='btn flex'>
               <button onClick={sumar}> + </button>
               <div className='btnCount flex'>
-              <button className='btn btnCountStyle'>Añadir al carrito</button>
+              <button className='btn btnCountStyle'>Agregar al carrito</button>
               </div>
             </div>
-
+            </Link>
           </div>)}
 
         </div>
