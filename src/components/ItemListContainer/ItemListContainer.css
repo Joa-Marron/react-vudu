@@ -1,59 +1,13 @@
-@font-face {
-    font-family: Roboto;
-    src: url(../../assets/font/Roboto-Regular.ttf);
-}
-
-@font-face {
-    font-family: Loading;
-    src: url(../../assets/font/HeavyLoading.ttf);
-}
-
-@font-face {
-    font-family: Apple;
-    src: url(../../assets/font/AppleGaramond.ttf);
-}
-
-.flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .saludo {
     display: flex;
     justify-content: center;
-    font-family: Roboto;
+    font-family: 'Times New Roman', Times, serif;
     color: rgb(233, 85, 21);
     font-size: x-large;
     margin: 20px;
 }
 
-.listaProductos {
-    font-family: Apple;
-    font-size: larger;
-    color: rgb(34, 0, 56);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid black;
-    padding: 2px;
-    margin: 20px;
-}
-
-.imgProductos {
-    height: 400px;
-    width: 500px;
-    border: 3px solid rgb(255, 255, 255);
-}
-
-.loading {
-    font-family: Loading;
-    font-size: 80px;
-    color: rgb(16, 1, 36);
-}
-
-.count {
+/* .count {
     font-family: Apple;
     font-size: 25px;
 
@@ -74,4 +28,4 @@
     font-family: Apple;
     font-size: 25px;
     color: rgb(14, 1, 22);
-}
+} */

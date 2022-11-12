@@ -1,6 +1,4 @@
-.carrito{
-    margin: 15px;
-    border: 2px solid black;
-    padding: 10px;
-    background-color: #ebf2fa;
+.cart{
+    background-color: rgb(209, 209, 209);
+    border: 3px solid yellow;
 }

@@ -1,16 +1,17 @@
-import logo from '../../assets/media/logo.png'
-import Title from '../Title/Title'
+import logo from '/assets/logo.png'
 import './Header.css'
+import { Link } from 'react-router-dom'
+
 
 const Header = () => {
     return (
-        <div className='header'>
-            <Title title={'Vudu'} />  
+        <div>
             <div className='logo'>
-                <img src={logo} alt="" />
+            <Link to='/'><img src={logo} alt="" /></Link>
             </div>
         </div >
     )
 }
 
 export default Header
+

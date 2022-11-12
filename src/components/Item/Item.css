@@ -1,0 +1,40 @@
+@font-face {
+    font-family: Apple;
+    src: url(../../assets/font/AppleGaramond.ttf);
+}
+
+@font-face {
+    font-family: Caviar;
+    src: url(../../../public/assets/font/CaviarDreams_Bold.ttf);
+}
+
+.fontList{
+    list-style: none;
+    font-family: Caviar;
+    font-size: x-large;
+    color: rgb(83, 18, 1);
+    margin: 5px;
+}
+
+.listaProductos {
+    font-family: Apple;
+    font-size: larger;
+    color: rgb(34, 0, 56);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    padding: 2px;
+    margin: 20px;
+}
+
+.imgProductos {
+    height: 200px;
+    width: 300px;
+    }
+
+.flex{
+    display: flex;
+    justify-content: center;
+}
