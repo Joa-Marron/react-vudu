@@ -1,7 +1,12 @@
-.logo {
+.positionLogo {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2px;
-    background-color: bisque;
-}
+    background-color: rgb(247, 156, 72);
+    }
+
+    .logo{
+        height: 150px;
+    width: 200px;
+    }
