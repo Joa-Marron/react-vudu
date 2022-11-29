@@ -7,18 +7,18 @@ import './ItemListContainer.css'
 
 const ItemListContainer = (props) => {
 
- 
-  const [products, setProducts] = useState([])
-  const {categoriaID} = useParams()
 
-  
+  const [products, setProducts] = useState([])
+  const { categoriaID } = useParams()
+
+
   useEffect(() => {
     if (categoriaID) {
       gFetch
-      .then(resp => setProducts(resp.filter(prod => prod.categoria === categoriaID)))
-      .catch(err => console.log(err))
-      .finally(() => console.log('Siempre'))
-      
+        .then(resp => setProducts(resp.filter(prod => prod.categoria === categoriaID)))
+        .catch(err => console.log(err))
+        .finally(() => console.log('Siempre'))
+
     } else (
 
       gFetch
@@ -30,12 +30,8 @@ const ItemListContainer = (props) => {
 
   }, [categoriaID])
 
-  return  (
+  return (
     <div>
-
-      <div className='saludo'>
-        <h2>{props.greeting}</h2>
-      </div>
 
       <ItemList products={products} />
 
