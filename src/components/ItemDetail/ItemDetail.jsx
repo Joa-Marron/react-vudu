@@ -1,4 +1,6 @@
 import Contador from "../Contador/Contador";
+import Intercambiabilidad from "../Intercambiabilidad/Intercambiabilidad";
+
 
 const ItemDetail = ({ product }) => {
 
@@ -15,8 +17,26 @@ const ItemDetail = ({ product }) => {
                 <p>Stock: {product.stock}</p>
             </div>
             <div className="col">
-                <Contador stock={10} initial={1} onAdd={onAdd} />
-            </div>
+            { isCounter ? 
+                    <Contador 
+                        stock={10} 
+                        initial={1} 
+                        onAdd={onAdd} 
+                    
+                    />
+                :  
+                    <div className="container mt-5">
+                        <Link to='/cart' className="btn btn-success">Terminar mi compra</Link>
+                        <Link to='/' className="btn btn-success">Seguir Comprando </Link>
+                    </div>
+                    
+            }
+            
+        </div>
+        <div>
+            <Intercambiabilidad/>
+        </div>
+
         </div>
     )
 }

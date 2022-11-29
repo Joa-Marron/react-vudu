@@ -1,8 +1,8 @@
-import { useEffect } from 'react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { gFetch } from '../../utils/gFetch'
 import ItemList from '../ItemList/ItemList'
+
 import './ItemListContainer.css'
 
 const ItemListContainer = (props) => {
@@ -33,7 +33,7 @@ const ItemListContainer = (props) => {
   return (
     <div>
 
-      <ItemList products={products} />
+    <ItemList products={products}/>
 
     </div>
   )

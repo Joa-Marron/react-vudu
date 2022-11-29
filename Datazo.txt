@@ -201,6 +201,30 @@ const ItemListContainer = (props) => {
 
 export default ItemListContainer
 
+--stopPropagation--
+
+Para detener la propagación de un evento debe usar el stopPropagation. Mirar minuto 55 de clase de evento.
+
+--Para evitar el ingreso específico de algún caracter en un input--
+
+(Ejemplo para evitar vocales)
+
+function app(){
+  const noVocales = (event) => {
+    if ([65,69,73,79,85].includes(event.keyCode)){
+      event.preventDeFault();
+      console.log(event.Key);
+    }
+  };
+
+  return (
+    <div>
+    <input onKeyDown={noVocales}/>
+    </div>
+  );
+  }
+
+
 ---Atajo para crear componentes------
 
 Con "rafce" creo un nuevo componente.
