@@ -1,4 +1,4 @@
-let arrayList = [{
+let product = [{
     ID: '1',
     categoria: 'DC',
     nombre: 'FUNKO POP BATMAN 144',
@@ -69,12 +69,22 @@ let arrayList = [{
 }]
 
 
-export const gFetch = new Promise((resolve, reject) => {
+// export const gFetch = new Promise((resolve, reject) => {
 
-    setTimeout(() => {
-        resolve(arrayList)
+//     setTimeout(() => {
+//         resolve(arrayList)
         
-    }, 2000);
+//     }, 2000);
 
-})
+// })
+
+export const gFetch = (ID) => {
+
+    return new Promise ( (resuelto, rechazado) =>{
+        
+        setTimeout (() =>{
+            resuelto( ID ? product.find( item => item.ID === ID) : product )
+        }, 2000)
+    })
+}
 

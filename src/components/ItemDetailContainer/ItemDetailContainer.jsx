@@ -1,23 +1,20 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { gFetch } from "../../utils/gFetch"
 import ItemDetail from "../ItemDetail/ItemDetail"
-
+import {gFetch} from '../../utils/gFetch'
 
 export const ItemDetailContainer = () => {
 
-  const { productID } = useParams()
-  const [product, setProduct] = useState({})
+  const [product, setproduct] = useState ({})
 
-  useEffect(() => {
+  const {productID} = useParams ()
+
+   useEffect(() => {
     gFetch(productID)
-      .then(resp => setProduct(resp))
-      .catch(err => console.log(err))
-      .finally(() => console.log('Siempre'))
-
-  }, [])
-
-
+        .then((resp) => setProduct((resp) => resp.id === productID))
+        .catch((err) => console.log(err))
+        .finally(() => console.log("Siempre"));
+}, []);
 
 
   return (
@@ -25,6 +22,7 @@ export const ItemDetailContainer = () => {
     <ItemDetail product = { product } />
 
   )
-}
 
+}
+  
 export default ItemDetailContainer

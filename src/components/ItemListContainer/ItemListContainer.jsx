@@ -21,7 +21,7 @@ const ItemListContainer = (props) => {
 
     } else (
 
-      gFetch
+      gFetch()
         .then(resp => setProducts(resp))
         .catch(err => console.log(err))
         .finally(() => console.log('Siempre'))
