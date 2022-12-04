@@ -1,5 +1,5 @@
 import Contador from "../contador/Contador";
-import Intercambiabilidad from "../Intercambiabilidad/Intercambiabilidad";
+// import Intercambiabilidad from "../Intercambiabilidad/Intercambiabilidad";
 
 
 const ItemDetail = ({ product }) => {
@@ -25,9 +25,9 @@ const ItemDetail = ({ product }) => {
                 onAdd={onAdd} />
             </div>
 
-<div>
+{/* <div>
     <Intercambiabilidad/>
-</div>
+</div> */}
 
         </div>
     )

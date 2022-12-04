@@ -69,15 +69,6 @@ let product = [{
 }]
 
 
-// export const gFetch = new Promise((resolve, reject) => {
-
-//     setTimeout(() => {
-//         resolve(arrayList)
-        
-//     }, 2000);
-
-// })
-
 export const gFetch = (ID) => {
 
     return new Promise ( (resuelto, rechazado) =>{

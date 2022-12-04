@@ -14,7 +14,7 @@ const ItemListContainer = (props) => {
 
   useEffect(() => {
     if (categoriaID) {
-      gFetch
+      gFetch()
         .then(resp => setProducts(resp.filter(prod => prod.categoria === categoriaID)))
         .catch(err => console.log(err))
         .finally(() => console.log('Siempre'))
