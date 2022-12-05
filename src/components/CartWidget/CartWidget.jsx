@@ -1,6 +1,6 @@
-import carrito from '../../../public/assets/carrito.png'
 import './CartWidget.css'
 import { Link } from 'react-router-dom'
+import carrito from '../../../public/assets/icon/carrito.png'
 
 const CartWidget = () => {
 

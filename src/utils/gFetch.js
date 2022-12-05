@@ -53,9 +53,8 @@ let product = [{
         stock: 100,
         precio: 6500,
         foto: '../public/assets/marvel/hulk68.jpg'
-    }, {
-        
-    }, {
+    }, 
+    {
         ID: '8',
         categoria: 'DC',
         nombre: 'FUNKO POP BATMAN 144',
@@ -153,10 +152,10 @@ let product = [{
     {
         ID: '20',
         categoria: 'Series',
-        nombre: 'FUNKO POP SWAYER LOST 416',
+        nombre: 'FUNKO POP SAWYER LOST 416',
         stock: 100,
         precio: 7999,
-        foto: '../public/assets/series/swayer416.jpg'
+        foto: '../public/assets/series/sawyer416.jpg'
     },
     {
         ID: '21',

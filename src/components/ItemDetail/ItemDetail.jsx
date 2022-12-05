@@ -1,13 +1,18 @@
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 import Contador from "../contador/Contador";
 // import Intercambiabilidad from "../Intercambiabilidad/Intercambiabilidad";
 
 
 const ItemDetail = ({ product }) => {
 
+    const {cartList, agregarAlCarrito} = useContext(CartContext)
+
     const onAdd = (cantidad) => {
         console.log(cantidad);
+        agregarAlCarrito({product, cantidad})
     }
-
+    
     return (
         <div className="row">
 

@@ -224,6 +224,11 @@ function app(){
   );
   }
 
+---Context---
+
+createContext --> para crear
+provider --> proveedor
+useContext --> para usar
 
 ---Atajo para crear componentes------
 
