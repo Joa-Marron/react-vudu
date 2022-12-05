@@ -190,7 +190,7 @@ let product = [{
         foto: '../public/assets/peliculas/jareth364.jpg'
     },
     {
-        ID: '23',
+        ID: '25',
         categoria: 'Peliculas',
         nombre: 'FUNKO OBI-WAN KENOBI STAR WARS 270',
         stock: 100,
@@ -198,7 +198,7 @@ let product = [{
         foto: '../public/assets/peliculas/obi270.jpg'
     },
     {
-        ID: '24',
+        ID: '26',
         categoria: 'Peliculas',
         nombre: 'FUNKO TYLER FIGHT CLUB 919',
         stock: 100,
@@ -206,7 +206,7 @@ let product = [{
         foto: '../public/assets/peliculas/tyler919.jpg'
     },
     {
-        ID: '24',
+        ID: '27',
         categoria: 'Peliculas',
         nombre: 'FUNKO DARTH VADER STAR WARS 01',
         stock: 100,
