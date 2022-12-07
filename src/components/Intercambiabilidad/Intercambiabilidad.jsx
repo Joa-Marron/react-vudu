@@ -9,7 +9,7 @@ const InputCount = () => {
                 <button
                     className="btn btn-outline-primary"
                     onClick={() => console.log('Ir a Cart')}>
-                    Ir a cart o terminar compra</button>
+                    Terminar compra</button>
             </Link>
             <Link to='/'>
                 <button

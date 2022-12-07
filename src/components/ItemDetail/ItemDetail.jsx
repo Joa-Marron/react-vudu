@@ -1,4 +1,4 @@
-import { useCartContext } from "../../context/cartContext";
+import { useCartContext } from "../../context/CartContext";
 import Contador from "../Contador/Contador"
 import Intercambiabilidad from "../Intercambiabilidad/Intercambiabilidad";
 
