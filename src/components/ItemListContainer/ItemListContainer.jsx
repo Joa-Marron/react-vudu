@@ -25,10 +25,25 @@ const ItemListContainer = () => {
   }, [categoriaID]);
   
   return (
-    <div className="col text-center ">
+
+    <div>
+
+      {loading
+        ?
+        <h2>Cargando...</h2>
+
+        :
+        <div className="col text-center ">
       <ItemList products={products} />
     </div>
-  );
-};
+      }
+
+
+    </div>
+
+
+  )
+}
 
 export default ItemListContainer;
+
