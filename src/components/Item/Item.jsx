@@ -2,24 +2,26 @@ import { Link } from "react-router-dom"
 import './Item.css'
 
 
-const Item = ({product}) => {
+const Item = ({ product }) => {
     return (
         <div className="flex card">
-            <Link to={`/detail/${product.ID}`}>
+            <Link to={`/detail/${product.Id}`}>
                 <div className='flex'>
                     <img src={product.foto} alt={product.nombre} className='imgProductos card-img-top' />
                 </div>
                 <div className='listaProductos fontList card-body'>
-                    {product.nombre}
+                    <p>Nombre: {product.nombre}</p>
+
                 </div>
                 <div className='listaProductos fontList card-body'>
-                    {product.categoria}
-                </div>
-                <div className='lista>Productos fontList card-body'>
-                    {product.stock}
+                    <p>Categoría: {product.categoria}</p>
+
                 </div>
                 <div className='listaProductos fontList card-body'>
-                    {product.precio}
+                    <p>stock: {product.stock}</p>
+                </div>
+                <div className='listaProductos fontList card-body'>
+                    <p>Precio: {product.precio}</p>
                 </div>
             </Link>
 

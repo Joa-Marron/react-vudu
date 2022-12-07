@@ -10,7 +10,7 @@ const CartContextProvider = ({children}) => {
    
     const [cartList, setCartList] = useState([])
 
-    const agregarAlCarrito = (newProductCart) => {
+    const addToCart = (newProductCart) => {
         setCartList( [...cartList, newProductCart ])
     }
 
@@ -21,7 +21,7 @@ const CartContextProvider = ({children}) => {
     return(
         <CartContext.Provider value={{
             cartList, 
-            agregarAlCarrito, 
+            addToCart, 
             borrarCarrito
         }}>
             {children}

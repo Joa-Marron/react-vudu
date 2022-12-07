@@ -1,42 +1,34 @@
-import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import { gFetch } from '../../utils/gFetch'
-import ItemList from '../ItemList/ItemList'
-
-import './ItemListContainer.css'
-
-const ItemListContainer = (props) => {
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { collection,getDocs,getFirestore,query,where,} from "firebase/firestore";
+import ItemList from "../ItemList/ItemList";
 
 
-  const [products, setProducts] = useState([])
-  const { categoriaID } = useParams()
 
+const ItemListContainer = () => {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const { categoriaID } = useParams();
 
   useEffect(() => {
-    if (categoriaID) {
-      gFetch()
-        .then(resp => setProducts(resp.filter(prod => prod.categoria === categoriaID)))
-        .catch(err => console.log(err))
-        .finally(() => console.log('Siempre'))
-
-    } else (
-
-      gFetch()
-        .then(resp => setProducts(resp))
-        .catch(err => console.log(err))
-        .finally(() => console.log('Siempre'))
-    )
-
-
-  }, [categoriaID])
-
+    const dbFirestore = getFirestore()
+    const queryCollection = collection(dbFirestore, "productos");
+    let queryFilter = categoriaID
+      ? query(queryCollection, where("categoria", "==", categoriaID))
+      : queryCollection;
+    getDocs(queryFilter)
+      .then((resp) =>
+        setProducts(resp.docs.map((doc) => ({ id: doc.id, ...doc.data() })))
+      )
+      .catch((err) => console.log(err))
+      .finally(() => setLoading(false));
+  }, [categoriaID]);
+  
   return (
-    <div>
-
-    <ItemList products={products}/>
-
+    <div className="col text-center ">
+      <ItemList products={products} />
     </div>
-  )
-}
+  );
+};
 
-export default ItemListContainer
+export default ItemListContainer;
