@@ -1,33 +1,49 @@
 import { useState } from 'react'
+import InputContador from '../InputContador/InputContador'
+import './Contador.css'
 
-const Contador = ({ initial=1, stock=100, onAdd }) => {
-    const [cantidad, setCantidad] = useState(initial)
+
+const Contador = ({ initial = 1, stock = 100, onAdd }) => {
+    const [quantity, setQuantity] = useState(initial);
+    const [bool, setBool] = useState(true);
+    const add = () => {
+      if (quantity < stock) {
+        setQuantity(quantity + 1);
+      }
+    };
+  
+    const subtract = () => {
+      if (quantity > 1) {
+        setQuantity(quantity - 1);
+      }
+    };
+  
+    const addquantity = () => {
+      onAdd(quantity);
+      setBool(false);
+    };
     
-    const sumar = () => {
-        if (cantidad < stock) {
-            setCantidad(cantidad + 1)
-        }
-    }
-
-    const restar = () => {
-        if (cantidad > 1) {
-            setCantidad(cantidad - 1)
-        }
-    }
-
-    const addToCart = () => {
-        onAdd(cantidad)
-    }
-
-  return (
-    <div className='border border-2 border-primary container w-50'>
-        <button className='btn btn-outline-primary' onClick={restar}>-</button>
-        <label>{cantidad}</label>
-        <button className = "btn btn-outline-primary" onClick={sumar}>+</button><br/>
-        <button className='btn btn-outline-primary' onClick={addToCart}>Agregar al carrito</button>
-
-    </div>
-  )
-}
-
+    return (
+      <div className='btnCart'>
+        {bool === true ? (
+          <div>
+            <button className="btn btn-dark btn-outline-light border-dark m-1" onClick={subtract}>
+              -
+            </button>
+            <label>{quantity}</label>
+            <button className="btn btn-dark btn-outline-light border-dark m-1" onClick={add}>
+              +
+            </button>
+            <br />
+            <button className="btn btn-dark btn-outline-light border-dark m-1" onClick={addquantity}>
+              Agregar al carrito
+            </button>
+          </div>
+        ) : (
+          <InputContador />
+        )}
+      </div>
+    );
+  };
 export default Contador
+
