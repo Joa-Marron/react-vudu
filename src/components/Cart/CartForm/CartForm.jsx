@@ -47,9 +47,9 @@ const CartForm = () => {
   };
 
   const notify = () =>
-    toast.warn("La direccion de email fue ingresada incorrectamente. Intente nuevamente.", {
+    toast.warn("La direccion de email ingresada es incorrecta. Intente nuevamente.", {
       position: "top-right",
-      autoClose: 2500,
+      autoClose: 3500,
       theme: "dark",
     });
 
