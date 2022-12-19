@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { collection,getDocs,getFirestore,query,where,} from "firebase/firestore";
 import ItemList from "../ItemList/ItemList";
+import './ItemListContainer.css'
 
 
 
@@ -30,7 +31,7 @@ const ItemListContainer = () => {
 
       {loading
         ?
-        <h2>Cargando...</h2>
+        <h2 className="loading">Cargando...</h2>
 
         :
         <div className="col text-center ">

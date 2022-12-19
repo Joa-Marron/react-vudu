@@ -8,33 +8,22 @@
     src: url(../../../public/assets/font/CaviarDreams_Bold.ttf);
 }
 
-.fontList{
-    list-style: none;
-    font-family: Caviar;
-    font-size: x-large;
-    color: rgb(83, 18, 1);
-    margin: 5px;
-}
-
-.listaProductos {
+.fontList {
     font-family: Apple;
     font-size: larger;
     color: rgb(34, 0, 56);
     border: 2px solid black;
     padding: 5px;
-    margin: 20px;
-    height: 80px;
-    width: 350px;
 }
 
-.imgProductos {
-    height: 200px;
-    width: 300px;
-    }
-
-.flex{
+.cardList{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    display: inline-block;
+    margin: 10px;
 }
 
+.imgList{
+    width: 200px;
+    height: 250px;
+}

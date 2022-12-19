@@ -7,6 +7,7 @@ import Header from './components/Header/Header'
 import Cart from './components/Cart/Cart'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 import CartContextProvider from './context/CartContext'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
